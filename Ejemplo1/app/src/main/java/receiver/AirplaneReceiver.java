@@ -18,14 +18,13 @@ public class AirplaneReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        // Verificamos si el modo avión fue activado
+
         if (intent != null && Intent.ACTION_AIRPLANE_MODE_CHANGED.equals(intent.getAction())) {
             boolean state = intent.getBooleanExtra("state", false);
             Log.d("AirplaneReceiver", "Modo avión cambiado: " + state);
             viewModel.setAirplaneMode(state);
 
             if (!state) {
-                // Abre la app de llamadas con el número indicado
                 Intent dialIntent = new Intent(Intent.ACTION_DIAL);
                 dialIntent.setData(Uri.parse("tel:2665034499"));
                 dialIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
