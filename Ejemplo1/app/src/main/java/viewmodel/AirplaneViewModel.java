@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel;
 import model.AirplaneModeModel;
 
 public class AirplaneViewModel extends ViewModel {
-
+/**/
     private final MutableLiveData<AirplaneModeModel> airplaneMode = new MutableLiveData<>();
 
     public LiveData<AirplaneModeModel> getAirplaneMode() {

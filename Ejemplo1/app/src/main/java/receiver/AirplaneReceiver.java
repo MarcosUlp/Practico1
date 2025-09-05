@@ -8,8 +8,12 @@ import android.util.Log;
 import viewmodel.AirplaneViewModel;
 
 public class AirplaneReceiver extends BroadcastReceiver {
-
-
+/*
+Clase especial de android que recibe el evento cuando se cambia el estado del "Modo avion"
+en el onReceive se verifica el estado y se actua en consecuencia:
+true: solo muestra un mensaje
+false: abre la app de llamadas Intent.ACTION_DIAL
+ */
     private final AirplaneViewModel viewModel;
 
     public AirplaneReceiver(AirplaneViewModel viewModel) {

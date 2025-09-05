@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ejemplo1">
-
+        <!--aca declaramos nuestro MainActivity-->
+        <!--El receiver lo hacemos dinamicamente en el codigo -->
         <activity
                 android:name="view.MainActivity"
                 android:exported="true">

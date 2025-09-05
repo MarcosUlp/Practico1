@@ -15,7 +15,11 @@ import receiver.AirplaneReceiver;
 import viewmodel.AirplaneViewModel;
 
 public class MainActivity extends AppCompatActivity {
-
+/* Activity de la vista principal
+* Text view que muestra modo avion activado-desactivado
+* se encarga de registrar el broadcast declarado con ACTION_AIRPLANE_MODE_CHANGED mientras el activity este activa
+* desregistra el broadcast con onDestroy
+* aca esta la parte que controla la vista del usuario, tambien se registran los broadcast para que escuche el evento modo avion mientras este vivo el activity */
     private TextView tvStatus;
     private AirplaneViewModel viewModel;
     private AirplaneReceiver receiver;
